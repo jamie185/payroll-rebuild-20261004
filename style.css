@@ -31,7 +31,9 @@ h4{font-size:19px;letter-spacing:-.015em;line-height:1.2}
 .nav .mark img{width:22px}
 .nav a{text-decoration:none;font-size:14px;font-weight:600;padding:9px 14px;border-radius:24px;color:var(--ink-2);transition:background .35s var(--ease),color .35s var(--ease)}
 .nav a:hover{color:var(--ink)}
-.nav a.on{background:var(--dark);color:var(--btn-ink)}
+.nav a{position:relative}
+.nav a.on{color:var(--ink)}
+.nav a.on::after{content:"";position:absolute;left:14px;right:14px;bottom:3px;height:2px;border-radius:2px;background:var(--ink)}
 
 /* sections */
 section{padding:100px 0 30px}
