@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Saturday payroll in 20 minutes · JF Payroll Desk rebuild</title>
+<meta name="robots" content="noindex">
+<link rel="preload" href="fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="jf-mark.svg">
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <span class="mark"><img src="jf-mark.svg" alt="JF"></span>
+  <a href="#flow">20 minutes</a>
+  <a href="#card">Trainer card</a>
+  <a href="#comms">Commissions</a>
+  <a href="#signoff">Sign-off</a>
+  <a href="#xero">Xero</a>
+  <a href="#square">Square &amp; Friday</a>
+  <a href="#open">Still open</a>
+</nav>
+
+<!-- HERO -->
+<header class="hero wrap">
+  <h1 class="rv">Saturday payroll,<br>in 20 minutes.</h1>
+  <p class="sub rv">Every frustration from Sunday's run, and what fixes it. You read, you say yes, your phone approves.</p>
+  <div class="hero-stats">
+    <div class="stat rv"><div class="lbl">Sunday 4 Oct</div><div class="num r">2 h 9<small> min</small></div><p>10:53am to 1:02pm. A third of it on one Xero step that a script now does in 30 seconds.</p></div>
+    <div class="stat rv" style="--d:.1s"><div class="lbl">Next Saturday</div><div class="num g">20<small> min</small></div><p>Everything is checked, scored and matched overnight. You only see what needs you.</p></div>
+    <div class="stat rv" style="--d:.2s"><div class="lbl">What you do</div><div class="num">9<small> taps</small></div><p>Seven yeses in the desk and two approvals on your phone. No typing.</p></div>
+  </div>
+  <div class="toc rv">
+    <a href="#flow"><i>1</i><b>The 20-minute Saturday</b><span>Before and after, minute by minute</span></a>
+    <a href="#card"><i>2</i><b>Trainer card</b><span>Confidence on every session, why yes, why not</span></a>
+    <a href="#comms"><i>3</i><b>Commissions in the app</b><span>Sales lead 12+ weeks and Kickstart bonuses</span></a>
+    <a href="#signoff"><i>4</i><b>Trainer weekly sign-off</b><span>Friday 5pm in JF Coach, signed in their name</span></a>
+    <a href="#xero"><i>5</i><b>Xero golden path</b><span>Eight steps, about two minutes</span></a>
+    <a href="#square"><i>6</i><b>Square matcher &amp; Friday night</b><span>Payments matched before you wake</span></a>
+    <a href="#open"><i>7</i><b>Still open</b><span>Spares and what's left</span></a>
+    <a href="#open" style="background:var(--card);box-shadow:none"><i>Note</i><b>Made-up data</b><span>Every name and amount on this page is fake</span></a>
+  </div>
+</header>
+
+<!-- 1. FLOW -->
+<section id="flow" class="tint">
+  <div class="wrap">
+    <div class="head rv">
+      <h2>Two hours down<br>to twenty minutes.</h2>
+      <p class="sub">The clean trainers took a minute each. The time went on a desk rebuilt live, evidence chased by hand, rules re-explained, commissions done twice and one Xero step.</p>
+    </div>
+
+    <div class="tl rv">
+      <div class="tl-top"><h4>Sunday 4 Oct, as it happened</h4><span class="num r">129 min</span></div>
+      <div class="bar" id="barBefore"></div>
+      <div class="scale"><span>10:53am</span><span>11:30</span><span>12:00</span><span>12:30</span><span>1:02pm</span></div>
+      <div class="sinks" id="sinks"></div>
+    </div>
+
+    <div class="tl rv">
+      <div class="tl-top"><h4>Next Saturday, the target</h4><span class="num g">20 min</span></div>
+      <div class="bar" id="barAfter" style="width:calc(20/129*100%);min-width:520px"></div>
+      <div class="scale" style="width:calc(20/129*100%);min-width:520px"><span>0</span><span>10 min</span><span>20 min</span></div>
+      <p class="small" style="margin-top:14px">Same scale as above. Friday night does the rest: trainer sign-off, evidence, confidence scores, Square matches and commissions are ready before you open the desk.</p>
+    </div>
+
+    <div class="taps">
+      <div class="tile rv">
+        <h4>What you tap</h4>
+        <ol class="taplist" style="margin-top:10px">
+          <li><div>Yes to the brief<small>Week, totals, what changed since overnight. One screen.</small></div></li>
+          <li><div>Yes to 13 green trainers at once<small>Signed off by the trainer, every session above 75%, nothing to decide.</small></div></li>
+          <li><div>Three flagged trainers, one yes each<small>Each opens on its calendar with the low-confidence sessions circled and the question asked.</small></div></li>
+          <li><div>Yes to commissions<small>Sales lead lines and Kickstart bonuses, already matched and checked against past payslips.</small></div></li>
+          <li><div>Approve the Xero sign-in on your phone<small>Only if the session went cold. Usually not needed.</small></div></li>
+          <li><div>Yes to post, STP and super<small>The super code is read off your phone for you.</small></div></li>
+        </ol>
+      </div>
+      <div class="tile rv">
+        <h4>What hurt, and what fixes it</h4>
+        <table class="fixmap" style="margin-top:12px">
+          <tr><td>The desk was rebuilt live and the app showed an old version</td><td>Calendar view is permanent and frozen before Saturday. No UI work during a walk.</td></tr>
+          <tr><td>Six rules re-explained (split padding, admin, 1:1s, late cancels, packs)</td><td>All in the standing rulings. The agent can't propose them again.</td></tr>
+          <tr><td>Sessions removed overnight without asking (paid no-shows)</td><td>Nothing is removed without your yes. Low-confidence sessions are shown and asked.</td></tr>
+          <tr><td>"Did this session happen?" needed live digging</td><td>Every session carries a confidence % with the evidence, scored Friday night.</td></tr>
+          <tr><td>Trainers leave finished clients and moved sessions in</td><td>Trainer signs off each day in JF Coach on Friday, in their own name.</td></tr>
+          <tr><td>"Where are the commissions?"</td><td>Commissions tab in the desk, worked out in the background from minute one.</td></tr>
+          <tr><td>Commissions built from the wrong source, then redone</td><td>Built from the HubSpot "Update to 12+" tasks, seller checked, duplicate guard on past payslips.</td></tr>
+          <tr><td>Kickstart payments not found (shared email, discount price)</td><td>Square matcher: phone, household, device, time and price family.</td></tr>
+          <tr><td>Xero include step: 42 minutes, four browser attempts</td><td>The script that finished it in 32 s becomes the only way.</td></tr>
+          <tr><td>Trainee not in the payroll app, hours dug out live</td><td>Friday card: "3 training blocks of 4 h, pay 12 h?" One yes.</td></tr>
+          <tr><td>Pay list came in pieces</td><td>Nets shown once, new ones only on the second ask.</td></tr>
+          <tr><td>Super code not on the Mac</td><td>Phone link starts at the post step, so the code is read the moment it lands.</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. TRAINER CARD -->
+<section id="card">
+  <div class="wrap">
+    <div class="head rv">
+      <h2>Every session,<br>with a confidence score.</h2>
+      <p class="sub">The calendar you know, with split shifts and breaks drawn in. Hover any session to see why it probably happened, or why not. Nothing comes off unless you say so.</p>
+    </div>
+
+    <div class="tc rv">
+      <div class="tc-head">
+        <div><h3>Holly Brennan<span class="small">3 of 16 · signed off Fri 6:12pm</span></h3></div>
+        <div class="tc-total"><div class="num" id="tcTotal">19.42<small> h</small></div><div class="small">Engine 20.92 h · <span class="r">1.5 h waiting on you</span></div></div>
+      </div>
+      <div class="tc-bar">
+        <div class="seg-ctl" id="viewCtl"><button class="on" data-v="cal">Calendar</button><button data-v="heat">Activity</button></div>
+        <div class="legend" id="legCal">
+          <span><i style="background:#E1ECFC"></i>Ongoing</span><span><i style="background:#DDF3E4"></i>Kickstart, free</span><span><i style="background:#EEE9FF"></i>1:1</span>
+          <span><i style="border:1.5px dashed rgba(77,163,255,.8)"></i>Admin</span><span><i style="background:#F1F3F7;border:1px dashed #C9CED8"></i>Paid break</span><span><i style="border:1.5px dashed rgba(245,165,36,.8)"></i>Split $20</span>
+          <span style="margin-left:6px"><b class="g">75%+</b> likely</span><span><b class="a">40 to 74%</b> unsure</span><span><b class="r">under 40%</b> unlikely</span><span><b class="b">Paid</b> genuine no-show</span>
+        </div>
+        <div class="hscale" id="legHeat" style="display:none">Quiet <i style="background:#F3F5F9"></i><i style="background:#FDE7C0"></i><i style="background:#F9C46B"></i><i style="background:#F5A524"></i><i style="background:#D98A00"></i> Busy · outlines are booked sessions · hover any slot</div>
+      </div>
+      <div class="tc-body">
+        <div class="panel">
+          <div id="calWrap"><div class="cal" id="cal"></div></div>
+          <div id="heatWrap" style="display:none"><div class="heat" id="heat"></div></div>
+          <table class="hgrid" id="hgrid"></table>
+        </div>
+        <div class="side">
+          <div class="decide" id="decide">
+            <div class="small" style="color:rgba(255,255,255,.5)">Asked, never auto-removed</div>
+            <h4>These 2 sessions are 3% likely to have happened. Remove?</h4>
+            <p>Ruben finished on 4 Oct. Both are from a weekly series that was never switched off.</p>
+            <div class="rows">
+              <div class="row"><span>Mon 7:00am · Ruben Ashford</span><b class="r">3%</b></div>
+              <div class="row"><span>Fri 6:30am · Ruben Ashford</span><b class="r">2%</b></div>
+              <div class="row"><span>If removed</span><b>−2.5 h (sessions + Monday split)</b></div>
+            </div>
+            <div class="btns"><button class="btn sm" id="btnRemove">Remove both</button><button class="btn sm ghost" id="btnKeep">Keep both</button></div>
+            <div class="done" id="decDone">Removed. The series end is sent to the sales lead to switch off.</div>
+          </div>
+          <div class="tile mini" style="padding:18px">
+            <h4>Calendar vs reality</h4>
+            <ul class="reality">
+              <li><span class="k r">Off</span><span>Mon 7am and Fri 6:30am, Ruben. Finished client, series left on.</span></li>
+              <li><span class="k a">Moved</span><span>Mon 5pm Owen, moved to Wed 5:45pm by message. Wed then cancelled (trainer stuck in traffic).</span></li>
+              <li><span class="k g">Missing</span><span>Mon 4:45pm Jasmine happened but isn't on the calendar. Swap it for her Thu 7pm (6%). Same pay.</span></li>
+              <li><span class="k b">No-show</span><span>3 free-session no-shows with notes and texts. Paid, as the rule says.</span></li>
+            </ul>
+          </div>
+          <div class="tile mini" style="padding:18px">
+            <h4>How the score is built</h4>
+            <ul class="reality">
+              <li><span class="k g">+ strong</span><span>Workout logged in the slot, client "on my way" text, trainer note</span></li>
+              <li><span class="k g">+ some</span><span>Trainer opened the client on iPad or iPhone in the slot, client opened the app</span></li>
+              <li><span class="k r">− strong</span><span>Client finished, moved by message, cancel text, series left running</span></li>
+              <li><span class="k">Signed</span><span>Trainer's Friday sign-off adds or removes weight, never decides alone</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. COMMISSIONS -->
+<section id="comms" class="tint">
+  <div class="wrap">
+    <div class="head rv">
+      <h2>Commissions,<br>in the desk.</h2>
+      <p class="sub">Worked out in the background the moment you say "payroll time". Built your way: from the HubSpot tasks, seller checked, and never paid twice.</p>
+    </div>
+
+    <div class="grid2" style="grid-template-columns:1.45fr 1fr">
+      <div class="tile rv">
+        <div style="display:flex;justify-content:space-between;align-items:baseline"><h4>Sales lead, 12+ week commissions</h4><span class="small">Grace Moreau · 10% of first 12 weeks</span></div>
+        <p class="small" style="margin:6px 0 12px">Source: 11 open HubSpot tasks "Update to Service Delivery and Retention 12+". Seller from the strategy-session host and call notes. Checked against her last 12 payslips.</p>
+        <table class="ctable">
+          <thead><tr><th>Client</th><th>Sold by</th><th>First 12 weeks</th><th class="n">Commission</th><th>Paid before?</th></tr></thead>
+          <tbody>
+            <tr class="due"><td><b>Lachlan Reyes</b></td><td>Grace</td><td>12 × $40 weekly</td><td class="n"><b>$48.00</b></td><td class="g">No. Due now</td></tr>
+            <tr class="due"><td><b>Saoirse Bell</b></td><td>Grace</td><td>6 × $90 fortnightly</td><td class="n"><b>$54.00</b></td><td class="g">No. Due now</td></tr>
+            <tr class="due"><td><b>Marco Danvers</b></td><td>Grace</td><td>12 × $25 weekly</td><td class="n"><b>$30.00</b></td><td class="g">No. Due now</td></tr>
+            <tr class="mute"><td>Elise Fontaine</td><td>Grace</td><td>6 × $85 fortnightly</td><td class="n">$51.00</td><td>Yes, week ending 25 Sep. Task closed now</td></tr>
+            <tr class="mute"><td>Theo Kershaw</td><td>Grace</td><td>12 × $45 weekly</td><td class="n">$54.00</td><td>Yes, week ending 25 Sep. Task closed now</td></tr>
+            <tr class="mute"><td>Ivy Lambert</td><td>Grace</td><td>8 of 12 paid</td><td class="n">not yet</td><td>Due in about 4 weeks</td></tr>
+            <tr class="mute"><td>5 more clients</td><td>You</td><td>from the call notes</td><td class="n">none</td><td>You sold these</td></tr>
+          </tbody>
+          <tfoot><tr><td colspan="3">This week</td><td class="n">$132.00</td><td class="small" style="font-weight:600">3 lines, 1 yes</td></tr></tfoot>
+        </table>
+        <h4 style="font-size:14px;margin:18px 0 8px">Payslip message, written for you</h4>
+        <div class="msg">Ongoing sign up commissions (10% of first 12 weeks), 3 clients:
+Lachlan Reyes 48.00 (40 per week x 12)
+Saoirse Bell 54.00 (90 per fortnight x 6)
+Marco Danvers 30.00 (25 per week x 12)
+Total 3 commissions 132.00.</div>
+      </div>
+      <div class="rv" style="display:flex;flex-direction:column;gap:20px">
+        <div class="tile">
+          <h4>Duplicate guard</h4>
+          <p class="small" style="margin:6px 0 10px">Every commission line on the last 12 payslips, matched by client name from the payslip message.</p>
+          <div style="display:flex;gap:30px;margin-top:8px">
+            <div><div class="num" style="font-size:40px">31</div><div class="small">past lines read</div></div>
+            <div><div class="num g" style="font-size:40px">0</div><div class="small">repeats this week</div></div>
+            <div><div class="num a" style="font-size:40px">2</div><div class="small">tasks to close</div></div>
+          </div>
+          <p style="font-size:13.5px;margin-top:14px" class="ink2">Two clients were paid last week but their tasks were never ticked. The desk closes them after the run, so they never show up again.</p>
+        </div>
+        <div class="tile">
+          <h4>What went wrong on Sunday</h4>
+          <ul class="reality" style="margin-top:8px">
+            <li><span class="k r">Before</span><span>Started from an old ledger and surfaced a client who finished in August.</span></li>
+            <li><span class="k r">Before</span><span>Didn't separate your sales from the sales lead's.</span></li>
+            <li><span class="k g">Now</span><span>Tasks first, seller per client, then the payslip check, then one line per client.</span></li>
+            <li><span class="k g">Now</span><span>Ready before the third trainer. You never wait on it.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="rv" style="margin:60px 0 8px">Kickstart bonuses, matched in Square</h3>
+    <p class="sub rv" style="font-size:18px;margin-top:6px;margin-bottom:24px">Each bonus shows the payment that proves it. No more "no payment anywhere".</p>
+    <div class="grid3">
+      <div class="bonus rv">
+        <div class="top"><h4>Zara Hussain</h4><span class="num">11<small class="small"> bonuses</small></span></div>
+        <div class="small">23 free sessions, 11 Kickstarts sold, 11 matched</div>
+        <ul class="ev">
+          <li><span class="icon" style="background:#8BD42A22">✓</span><span><b>8 straight matches.</b> $99.99 Kickstart, client's own phone and email.</span></li>
+          <li><span class="icon" style="background:#4DA3FF22">⌂</span><span><b>Kit and Lou Barlow.</b> One household email, two payments. Matched by phone and session time.</span></li>
+          <li><span class="icon" style="background:#F5A52422">⏱</span><span><b>Kit paid on Zara's phone</b> 4 min after her free session ended.</span></li>
+          <li><span class="icon" style="background:#8C7CF622">$</span><span><b>$69.99 discounted Kickstart.</b> Same product family, bonus paid.</span></li>
+        </ul>
+      </div>
+      <div class="bonus rv" style="--d:.1s">
+        <div class="top"><h4>Marco Feliciano</h4><span class="num">2<small class="small"> bonuses</small></span></div>
+        <div class="small">Both matched, one support pack</div>
+        <ul class="ev">
+          <li><span class="icon" style="background:#8BD42A22">✓</span><span><b>Nadia Price.</b> $99.99 Kickstart, 18 min after the free session.</span></li>
+          <li><span class="icon" style="background:#8C7CF622">$</span><span><b>Ellis Ward paid $99 for a 3x PT Support Pack.</b> Counts as a Kickstart, per your rule.</span></li>
+          <li><span class="icon" style="background:#1FC7A622">=</span><span><b>No earlier bonus</b> for either client in 520 approved weeks.</span></li>
+        </ul>
+      </div>
+      <div class="bonus rv" style="--d:.2s">
+        <div class="top"><h4>Ben Talbot</h4><span class="num a">0<small class="small"> of 1</small></span></div>
+        <div class="small">One sold, payment not found yet</div>
+        <ul class="ev">
+          <li><span class="icon" style="background:#FF5E3A22">?</span><span><b>Hugo Lind.</b> HubSpot says sold, 3 sessions done, no Square payment by phone, email, household or time.</span></li>
+          <li><span class="icon" style="background:#4DA3FF22">→</span><span><b>Held, not lost.</b> Carried to next week and paid the day the receipt appears.</span></li>
+          <li><span class="icon" style="background:#F5A52422">!</span><span><b>Follow-up sent</b> to the sales lead: "Hugo has trained 3 times without a payment."</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. SIGN-OFF -->
+<section id="signoff">
+  <div class="wrap">
+    <div class="head rv">
+      <h2>Trainers sign off<br>their own week.</h2>
+      <p class="sub">Friday at 5pm JF Coach asks every trainer to tick each day, add anything missing and sign it in their own name. A finished client left on the calendar becomes their call to explain, not your Saturday.</p>
+    </div>
+    <div class="phones">
+      <div class="rv">
+        <div class="phone"><div class="rim"></div><div class="screen lock">
+          <div class="island"></div>
+          <div class="sbar"><span>5:00</span><span>●●● ▮</span></div>
+          <div class="clock">5:00</div><div class="date">Friday 9 October</div>
+          <div class="notif"><div class="ai"><img src="jf-mark.svg" alt=""></div><div style="flex:1"><div class="nt">JF Coach <span>now</span></div><p><b>Sign off your week</b><br>20 sessions to confirm. Takes about a minute. Due by Saturday 7am.</p></div></div>
+          <div class="homeind" style="background:#fff"></div>
+        </div></div>
+        <div class="phone-cap"><b>Friday 5pm push</b><span>Reminder at 8pm and Saturday 6am if not done.</span></div>
+      </div>
+      <div class="rv" style="--d:.1s">
+        <div class="phone"><div class="rim"></div><div class="screen">
+          <div class="island"></div>
+          <div class="sbar"><span>5:02</span><span>●●● ▮</span></div>
+          <div class="ios-title">Your week</div>
+          <div class="ios-sub">3 to 9 Oct · 6 of 20 done</div>
+          <div class="ios-gh">Monday 5 Oct</div>
+          <div class="ios-group">
+            <div class="ios-row"><span class="ck x">✕</span><span><span class="who">Ruben Ashford</span><span class="sm">7:00am · didn't happen, he finished</span></span></div>
+            <div class="ios-row"><span class="ck x">✕</span><span><span class="who">Owen Pell</span><span class="sm">5:00pm · moved to Wednesday</span></span></div>
+            <div class="ios-row"><span class="ck y">✓</span><span><span class="who">Carla Mendez</span><span class="sm">6:00pm</span></span><span class="rt">workout<br>logged</span></div>
+            <div class="ios-row"><span class="ck y">✓</span><span><span class="who">Rhys Okafor</span><span class="sm">7:00pm · free session</span></span></div>
+          </div>
+          <div class="ios-gh">Tuesday 6 Oct</div>
+          <div class="ios-group">
+            <div class="ios-row"><span class="ck y">✓</span><span><span class="who">Freya Doyle</span><span class="sm">8:45am</span></span></div>
+          </div>
+          <div class="ios-gh">Wednesday 7 Oct</div>
+          <div class="ios-group">
+            <div class="ios-row"><span class="ck n"></span><span><span class="who">Theo Marsh</span><span class="sm">8:00am · free session</span></span></div>
+            <div class="ios-row"><span class="ck n"></span><span><span class="who">Ines Calder</span><span class="sm">8:30am · free session</span></span></div>
+          </div>
+          <div class="homeind"></div>
+        </div></div>
+        <div class="phone-cap"><b>Tick every day</b><span>Happened, didn't happen, or no-show. Workouts already logged are pre-ticked.</span></div>
+      </div>
+      <div class="rv" style="--d:.2s">
+        <div class="phone"><div class="rim"></div><div class="screen dimmed">
+          <div class="island"></div>
+          <div class="sbar"><span>5:03</span><span>●●● ▮</span></div>
+          <div class="ios-title">Your week</div>
+          <div class="ios-sub">Monday 5 Oct</div>
+          <div class="ios-group"><div class="ios-row"><span class="ck y">✓</span><span class="who">Carla Mendez</span></div><div class="ios-row"><span class="ck y">✓</span><span class="who">Hugo Lind</span></div></div>
+          <div class="sheet">
+            <div class="grab"></div>
+            <div style="display:flex;justify-content:space-between;padding:0 16px 10px;font-size:14px"><span style="color:#0A84FF">Cancel</span><b>Add a session</b><span style="color:#0A84FF;font-weight:650">Add</span></div>
+            <div class="field">Client <b>Jasmine Tate</b></div>
+            <div class="field">Day <b>Monday 5 Oct</b></div>
+            <div class="field">Time <b>4:45pm · 45 min</b></div>
+            <div class="field">Type <b>Ongoing</b></div>
+            <div class="field"><span>Why it's not on the calendar</span></div>
+            <div class="field" style="color:#1c1c1e">New Monday slot, agreed by text</div>
+            <p style="font-size:11.5px;color:#8a8a8e;padding:4px 16px 0">Added sessions are checked against her workout and messages before they're paid.</p>
+          </div>
+        </div></div>
+        <div class="phone-cap"><b>Add what's missing</b><span>The real Monday session that never made it onto the calendar.</span></div>
+      </div>
+      <div class="rv" style="--d:.3s">
+        <div class="phone"><div class="rim"></div><div class="screen dimmed">
+          <div class="island"></div>
+          <div class="sbar"><span>5:04</span><span>●●● ▮</span></div>
+          <div class="ios-title">Your week</div>
+          <div class="ios-sub">20 of 20 done · 1 added</div>
+          <div class="ios-btn">Submit week</div>
+          <div class="sheet">
+            <div class="grab"></div>
+            <div style="text-align:center;font-weight:700;font-size:16px;padding:2px 0 8px">Confirm your week</div>
+            <p class="confirm-copy">I, <b>Holly Brennan</b>, confirm that the 13 sessions I ticked for 3 to 9 October happened, the 3 no-shows were genuine, the 4 I marked did not happen, and the session I added is correct.</p>
+            <p class="confirm-copy" style="color:#8a8a8e;font-size:12px">Your pay is based on this. Jamie sees what you confirmed.</p>
+            <div class="ios-btn dk">Confirm</div>
+            <div class="ios-btn lt" style="margin-top:0">Go back</div>
+          </div>
+        </div></div>
+        <div class="phone-cap"><b>Submit, then confirm</b><span>Two taps, signed in their name and time-stamped.</span></div>
+      </div>
+    </div>
+
+    <div class="grid2 mt2" style="grid-template-columns:1.3fr 1fr">
+      <div class="tile rv desk-signoff">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px"><h4>On the desk, Saturday morning</h4><span class="small">13 of 16 signed off</span></div>
+        <div class="row"><span class="nm">Holly Brennan</span><span class="st"><span class="sq" style="background:var(--rec)"></span>Confirmed Fri 6:12pm</span><span class="ds">4 marked didn't happen, 1 added. Matches the scores.</span></div>
+        <div class="row"><span class="nm">Marco Feliciano</span><span class="st"><span class="sq" style="background:var(--rec)"></span>Confirmed Fri 5:20pm</span><span class="ds">All 24 ticked. Every session above 85%.</span></div>
+        <div class="row"><span class="nm">Priya Nair</span><span class="st"><span class="sq" style="background:var(--strain)"></span>Confirmed, 1 disagreement</span><span class="ds">Ticked Thu 7am, but it scores 12%. Asked on her card.</span></div>
+        <div class="row"><span class="nm">Tom Ashby</span><span class="st"><span class="sq" style="background:var(--red)"></span>Not signed off</span><span class="ds">Reminded Fri 8pm and Sat 6am. Paid on the calendar, flagged to the sales lead.</span></div>
+        <div class="row"><span class="nm">Lena Kovac</span><span class="st"><span class="sq" style="background:var(--rec)"></span>Confirmed Sat 6:40am</span><span class="ds">Added one 1:1, which has its calendar invite.</span></div>
+      </div>
+      <div class="tile rv">
+        <h4>Rules it follows</h4>
+        <ul class="reality" style="margin-top:8px">
+          <li><span class="k">Pay</span><span>Unsigned weeks are still paid as the calendar shows. Sign-off adds evidence, it doesn't hold pay.</span></li>
+          <li><span class="k">Clash</span><span>Ticked but scored low, or unticked but scored high: you get one question on that card.</span></li>
+          <li><span class="k">Added</span><span>Added sessions need a workout, a message or a booking trail before they're paid.</span></li>
+          <li><span class="k">Spares</span><span>Each tick says regular, makeup or spare. That feeds the spares ledger (section 7).</span></li>
+          <li><span class="k">Trainers</span><span>They only see their own clients. No office systems, no HubSpot.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. XERO -->
+<section id="xero" class="tint">
+  <div class="wrap">
+    <div class="head rv">
+      <h2>Xero, one<br>golden path.</h2>
+      <p class="sub">Fixed scripts with read-back checks and time limits, no free-form browser control. About three minutes of machine time and two yeses from you.</p>
+    </div>
+    <div class="grid2 xgrid" style="grid-template-columns:1.5fr 1fr">
+      <div class="tile rv">
+        <ol class="steps">
+          <li><span class="n">0</span><div class="w"><b>Sign in first</b><span>Starts at "payroll time", so any phone approval lands while you decide trainer 1</span></div><div class="tm">20 s<small>background</small></div><div class="was"><s>Approval landed</s> in the middle of the include step</div></li>
+          <li><span class="n">1</span><div class="w"><b>Approve all timesheets</b><span>16 timesheets, hours read back</span></div><div class="tm">4 s<small>API</small></div><div class="was">Was fine. Kept as is.</div></li>
+          <li><span class="n">2</span><div class="w"><b>Create the draft pay run</b><span>Week ending Friday</span></div><div class="tm">3 s<small>API</small></div><div class="was">Was fine.</div></li>
+          <li><span class="n">3</span><div class="w"><b>Include every employee</b><span>All 18, fixed script, stops after 90 s without progress</span></div><div class="tm">30 s<small>script</small></div><div class="was"><s>42 min</s> over four browser attempts. The script did 9 rows in 32 s</div></li>
+          <li><span class="n">4</span><div class="w"><b>Commission lines and message</b><span>One line per client, message saved, read back</span></div><div class="tm">5 s<small>API</small></div><div class="was"><s>"Not saved"</s> false alarm; message never saved</div></li>
+          <li><span class="n">5</span><div class="w"><b>Owner stub at $0</b><span>Any non-trainer earnings flagged and zeroed</span></div><div class="tm">2 s<small>API</small></div><div class="was"><s>$42.35</s> of old template lines carried over</div></li>
+          <li class="you"><span class="n">6</span><div class="w"><b>Post the pay run</b><span>Your yes. Nets shown first, new ones marked</span></div><div class="tm">3 s<small>1 yes</small></div><div class="was">Pay list split into "already given" and new</div></li>
+          <li class="you"><span class="n">7</span><div class="w"><b>File STP</b><span>Your yes. Declaration in your name</span></div><div class="tm">10 s<small>same yes</small></div><div class="was">Was fine.</div></li>
+          <li class="you"><span class="n">8</span><div class="w"><b>Pay super</b><span>SMS code read off your phone and entered</span></div><div class="tm">45 s<small>auto code</small></div><div class="was"><s>Mac Messages</s> not synced since 29 Sep</div></li>
+        </ol>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:2px solid var(--hair);padding-top:16px;margin-top:4px">
+          <b>Whole path</b><span class="num g" style="font-size:34px">about 3 min</span>
+        </div>
+      </div>
+      <div class="rv" style="display:flex;flex-direction:column;gap:20px">
+        <div class="tile">
+          <h4>What broke on Sunday, and the fix</h4>
+          <table class="breaks" style="width:100%;border-collapse:collapse;margin-top:8px">
+            <tr><td>Browser login missing</td><td>Xero sign-in failed at 10:54</td><td>Friday health check tests the session; sign-in starts first.</td></tr>
+            <tr><td>Status reads stuck on errors</td><td>Blocked 2 min, then 4.6 min</td><td>20 s limit per call, stops after the first error.</td></tr>
+            <tr><td>Include step</td><td>Four attempts, 9 of 18, 42 min</td><td>The 32-second script, counted after.</td></tr>
+            <tr><td>Trainee training hours</td><td>10 minutes mid-push</td><td>One card in the walk, ready Friday night.</td></tr>
+            <tr><td>Pay list in pieces</td><td>"Show me the ones not on the first list"</td><td>Nets given are remembered; only new ones on the next ask.</td></tr>
+          </table>
+        </div>
+        <div class="cardbg">
+          <h4>Phone approvals</h4>
+          <p class="ink2" style="font-size:14.5px;margin-top:8px">The Xero sign-in starts the moment you say "payroll time", so if your phone buzzes it's while you're still on trainer 1. The phone link starts at the post step, and the super code is read and entered without you typing it. You get one clear line: "Tap approve on your phone".</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. SQUARE + FRIDAY -->
+<section id="square">
+  <div class="wrap">
+    <div class="head rv">
+      <h2>Payments matched<br>before you wake.</h2>
+      <p class="sub">A Square matcher that reads every payment the way you would: who paid, from which phone, at what time, for what price, next to which session.</p>
+    </div>
+    <div class="flow rv">
+      <div class="st"><div class="k">1 · Pull</div><b>Every Square payment</b><p>Amount, item, customer, card, device, location and time for the week.</p></div>
+      <div class="st"><div class="k">2 · Signals</div><b>Phone, email, household</b><p>Shared family emails split by phone. Names fuzzy-matched to HubSpot.</p></div>
+      <div class="st"><div class="k">3 · Context</div><b>Device and time</b><p>Taken on a trainer's phone minutes after their free session ends.</p></div>
+      <div class="st"><div class="k">4 · Product</div><b>Price family</b><p>$99.99, $69.99 discount and the $99 support pack all count as a Kickstart.</p></div>
+      <div class="st"><div class="k">5 · Result</div><b>Match with a score</b><p>Bonus paid on a clear match. Anything else is held with the reason.</p></div>
+    </div>
+    <div class="tile rv mt">
+      <h4>Last week's hard ones, solved without you</h4>
+      <table class="ctable" style="margin-top:10px">
+        <thead><tr><th>Payment</th><th>Looked like</th><th>Matched by</th><th>Trainer</th><th class="n">Confidence</th></tr></thead>
+        <tbody>
+          <tr><td>$69.99 · Wed 6:49pm</td><td>Unknown payer, shared email</td><td>Taken on Zara's phone 4 min after Kit's 6pm free session; phone number on the deal</td><td>Zara Hussain</td><td class="n g"><b>97%</b></td></tr>
+          <tr><td>$69.99 · Wed 3:12pm</td><td>Same email as above</td><td>Paid by link after the sales lead's call; call note "sold with a discount"</td><td>Zara Hussain</td><td class="n g"><b>94%</b></td></tr>
+          <tr><td>$99.00 · Tue 7:31pm</td><td>"3x PT Support Pack", not Kickstart</td><td>Product family rule; client's own card and phone</td><td>Marco Feliciano</td><td class="n g"><b>99%</b></td></tr>
+          <tr><td>none found</td><td>HubSpot says sold</td><td>No payment by phone, email, household, device or time window</td><td>Ben Talbot</td><td class="n a"><b>held</b></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="dark-sec rv mt2">
+      <h3>The Friday-night routine</h3>
+      <p class="sub" style="font-size:18px;margin-bottom:34px">Everything that cost time on Sunday moves here, while you sleep. The background commissions agent also starts the second you say "payroll time", in case anything changed.</p>
+      <div class="fri-track">
+        <div class="fri-ev" style="--c:var(--blue)"><div class="dy">Fri</div><div class="tm">5:00pm</div><b>Sign-off push</b><p>Every trainer gets their week in JF Coach.</p></div>
+        <div class="fri-ev" style="--c:var(--blue)"><div class="dy">Fri</div><div class="tm">8:00pm</div><b>Reminder</b><p>Only to trainers who haven't signed.</p></div>
+        <div class="fri-ev" style="--c:var(--strain)"><div class="dy">Fri</div><div class="tm">10:00pm</div><b>Square matcher</b><p>Kickstart and pack payments matched to sessions.</p></div>
+        <div class="fri-ev" style="--c:var(--strain)"><div class="dy">Sat</div><div class="tm">3:05am</div><b>Week snapshot</b><p>Calendar, app activity, workouts, messages, notes.</p></div>
+        <div class="fri-ev" style="--c:var(--sleep)"><div class="dy">Sat</div><div class="tm">3:20am</div><b>Preflight</b><p>Analyst and verifier per trainer, your standing rules.</p></div>
+        <div class="fri-ev" style="--c:var(--sleep)"><div class="dy">Sat</div><div class="tm">4:30am</div><b>Confidence scores</b><p>Written onto every session on the calendar.</p></div>
+        <div class="fri-ev" style="--c:var(--teal)"><div class="dy">Sat</div><div class="tm">5:00am</div><b>Commissions</b><p>From the HubSpot tasks, payslip-checked.</p></div>
+        <div class="fri-ev" style="--c:var(--teal)"><div class="dy">Sat</div><div class="tm">6:30am</div><b>Morning refresh</b><p>Late sign-offs and calendar edits re-scored.</p></div>
+        <div class="fri-ev" style="--c:var(--rec)"><div class="dy">Sat</div><div class="tm">7:00am</div><b>"Payroll's ready"</b><p>One message with the time it'll take.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. STILL OPEN -->
+<section id="open" class="tint">
+  <div class="wrap">
+    <div class="head rv">
+      <h2>Still open:<br>spares.</h2>
+      <p class="sub">The one you called out. A trainer leaves a late-cancelled session in (paid, fair), then also does a makeup. Today nothing connects the two, so the client's spare count drifts.</p>
+    </div>
+    <div class="grid2" style="grid-template-columns:1fr 1.25fr">
+      <div class="tile rv">
+        <h4>The proposed approach</h4>
+        <ol class="taplist" style="margin-top:10px">
+          <li><div><b>Trainer says what each session was</b><small>On the Friday sign-off: regular, makeup or spare used. One tap per session.</small></div></li>
+          <li><div><b>Confidence checks the claim</b><small>A makeup with no workout, no message and no booking trail scores low and gets asked.</small></div></li>
+          <li><div><b>A spare ledger per client</b><small>Late cancels kept in add a credit used. Makeups draw one down. Paid sessions are compared with what the client pays for.</small></div></li>
+          <li><div><b>Double-count alert</b><small>A late cancel left in and a makeup within 14 days for the same client: flagged on the card, with the two sessions side by side.</small></div></li>
+          <li><div><b>Trainer confirms the count monthly</b><small>Exact match with a high-confidence ledger becomes the new anchor. Otherwise you approve it in the desk.</small></div></li>
+        </ol>
+      </div>
+      <div class="tile rv">
+        <div style="display:flex;justify-content:space-between;align-items:baseline"><h4>Example: one client's ledger</h4><span class="small">Cassie Rowe · pays for 1.5 h a week · trainer Marco</span></div>
+        <table class="ledger" style="margin-top:12px">
+          <thead><tr><th>Date</th><th>Session</th><th>What happened</th><th class="n">Spares</th></tr></thead>
+          <tbody>
+            <tr><td>Mon 28 Sep</td><td>Opening count</td><td>Confirmed by trainer</td><td class="n">4</td></tr>
+            <tr><td>Tue 6 Oct</td><td>6:30pm, 1 h</td><td>Late cancel (3.5 h notice), left in, paid</td><td class="n">4</td></tr>
+            <tr><td>Thu 8 Oct</td><td>6:30pm, 30 min</td><td>Late cancel, left in, paid</td><td class="n">4</td></tr>
+            <tr class="flag"><td>Fri 9 Oct</td><td>4:30pm, 1 h</td><td><b class="r">Makeup for Tue and Thu, done</b>, both originals still paid</td><td class="n r">3?</td></tr>
+          </tbody>
+        </table>
+        <div class="cardbg" style="margin-top:16px;padding:20px">
+          <b>On the card it reads:</b>
+          <p class="ink2" style="font-size:14.5px;margin-top:6px">"Cassie's Tue and Thu late cancels are paid and her Fri session replaced them. Pay all three (her spares go from 4 to 3), or pay Friday only?"</p>
+          <div style="display:flex;gap:8px;margin-top:12px"><span class="btn sm">Pay all three</span><span class="btn sm ghost">Friday only</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tile rv mt2">
+      <div style="display:flex;justify-content:space-between;align-items:baseline"><h4>Other open items</h4><span class="small" id="openStamp">From the build team, 4 Oct</span></div>
+      <ul class="open-list" id="openList" style="margin-top:8px">
+        <li><span class="who">Your action</span><span>Remove the two old lines on your own pay template in Xero (a commission and a break). They're zeroed each week until then.</span></li>
+        <li><span class="who">Xero build</span><span>The fixed scripts: sign-in, include, status with time limits, trainee timesheets, nets. Being built now; the walk falls back to the 32-second script.</span></li>
+        <li><span class="who">Desk build</span><span>Confidence on every session and the commissions tab. Being built now; the walk already lists low-confidence sessions with their evidence.</span></li>
+        <li><span class="who">Square build</span><span>The Friday-night matcher. Being built now; until then, unmatched bonuses are searched at the start of the walk.</span></li>
+        <li><span class="who">JF Coach build</span><span>Trainer weekly sign-off. Being built and tested; goes to the app only after a full check.</span></li>
+        <li><span class="who">Your list</span><span>Email the sales lead about one trainer's calendar: a finished client and moved sessions left on repeat.</span></li>
+        <li><span class="who">Your list</span><span>Saturday pay at a second gym, two short rests between shifts, one trainer's hours halved, one client not training.</span></li>
+        <li><span class="who">Xero</span><span>Two old super batches still waiting for approval. Left alone on purpose.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer class="wrap">
+  <img src="jf-mark.svg" alt="" style="width:34px;background:#14213D;padding:8px;border-radius:10px;box-sizing:content-box"><br><br>
+  JF Payroll Desk rebuild · mock-up, 4 Oct 2026 · all names, hours and amounts are made up
+</footer>
+
+<div class="tip" id="tip"></div>
+<script src="app.js"></script>
+</body>
+</html>
